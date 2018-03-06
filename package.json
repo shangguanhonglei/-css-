@@ -1,0 +1,27 @@
+{
+  "name": "secrets",
+  "version": "1.0.0",
+  "description": ">主要记录本书的一些css技巧，方便以后查看\r ## 目录\r ### 第一章（引言）\r ### 第二章（背景与边框）\r ### 第三章（形状）\r ### 第四章（视觉效果）\r ### 第五章（字体排印）\r ### 第六章（用户体验）\r ### 第七章（结构与布局）\r ### 第八章（过度与动画）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shangguanhonglei/CSS-Secrets.git"
+  },
+  "author": "shangguanhonglei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shangguanhonglei/CSS-Secrets/issues"
+  },
+  "homepage": "https://github.com/shangguanhonglei/CSS-Secrets#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "imagemin-pngquant": "^5.0.1"
+  }
+}

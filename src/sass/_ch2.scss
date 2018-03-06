@@ -1,0 +1,120 @@
+@import './mixins/ch2';
+@import './variable';
+.ch2-bg{
+	@include clearfix();
+	.ch2-bg1{
+	background:linear-gradient(#fb3,#58a);
+	}
+	.ch2-bg2{
+		background:linear-gradient(#fb3 20%,#58a 50%);
+	}
+	.ch2-bg3{
+		background:linear-gradient(#fb3 50%,#58a 50%);
+		background-size:100% 30px;
+		background-repeat:no-repeat;
+	}
+	.ch2-bg4{
+		background:linear-gradient(red 20%,blue 20%,blue 40%,yellow 40%,yellow 60%,purple 60%);
+		background-size:100% 30px;
+	}
+}
+.ch2-ver-bg{
+	@include clearfix();
+	.ch2-ver-bg1{
+		background:linear-gradient(to right,#fb3 50%,#58a 50%);
+		background-size:30px 100% ;
+	}
+	.ch2-ver-bg2{
+		background:linear-gradient(to right,#fb3 30%,#58a 30%,#58a 60%,red 60%);
+		background-size:30px 100% ;
+	}
+
+	.ch2-ver-bg3{
+		background:linear-gradient(45deg,#fb3 50%,#58a 50%);
+		background-size:30px 30px ;
+	}
+	.ch2-ver-bg4{
+		background:linear-gradient(45deg,#fb3 25%,#58a 0,#58a 50%,#fb3 0,#fb3 75%,#58a 0);
+		background-size:30px 30px ;
+	}
+	.ch2-ver-bg5{/* 斜向的直接指定颜色和位置，位置用像素表示 */
+		background:repeating-linear-gradient(60deg,#fb3,#fb3 30px,#58a 30px,#58a 60px);
+	}
+	.ch2-ver-bg6{
+		background-color:#58a;
+		background-image:repeating-linear-gradient(30deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.1) 15px, transparent 0,transparent 30px);
+	}
+} 
+.ch2-size{
+	@include size($chp2-width,$chp2-height)
+	float:left;
+	margin-left:3px;
+}
+.ch2-grid-bg{
+	@include clearfix();
+	.ch2-grid-bg1{
+		background:linear-gradient(rgba(200,0,0,.4) 50%,transparent 0),linear-gradient(90deg, rgba(100,30,2,.5) 50%,transparent 0);
+		background-size:30px 30px;
+		background-color:white;
+	}
+	.ch2-grid-bg2{
+		background:linear-gradient(white 1px,transparent 0),linear-gradient(90deg,white 1px,transparent 0),linear-gradient(white 3px,transparent 0),linear-gradient(90deg,white 3px,transparent 0);
+		background-size:30px 30px,30px 30px,150px 150px,150px 150px;
+		background-color:#58a;
+	}	
+	.ch2-grid-bg3{
+		@include wavePoint(rgba(200,0,0,.5),40%,40px,purple);
+	}	
+	.ch2-grid-bg4{
+		background:linear-gradient(45deg, gray 25%,transparent 0),linear-gradient(45deg,transparent 75%,gray 0),linear-gradient(45deg,gray 25%,transparent 0),linear-gradient(45deg,transparent 75%,gray 0);
+		background-size:30px 30px;
+		background-position:0 0 ,15px 15px,15px 15px,30px 30px;
+	}
+	.ch2-grid-bg5{
+		
+	}
+}	
+.ch2-size-large{
+	@include size($chp2-width-large,$chp2-height-large);
+	float:left;
+	margin-left:3px;
+}
+.ch2-random-bg{
+	@include clearfix();
+	.ch2-random-bg1{
+		width:1000px;
+		background:gray;
+		background-image:linear-gradient(90deg,yellow 11px,transparent 0),
+						 linear-gradient(90deg,blue 23px,transparent 0),
+						 linear-gradient(90deg,purple 63px,transparent 0);
+		background-size:21px 100%,41px 100%,83px 100%;
+	}
+	.ch2-random-bg2{
+
+	}
+}
+.ch2-img-border{
+	@include clearfix();
+	.ch2-img-border1{
+		border-image:url(../img/bg.jpg);
+
+	}
+	.ch2-img-border2{
+		border:1em solid transparent;
+		padding:1em;
+		background:linear-gradient(white,white) padding-box,url(../img/bg.jpg) border-box 0 / cover;
+
+	}
+	.ch2-img-border3{
+		padding:1em;
+		border:1px solid transparent;
+		background:linear-gradient(white,white) padding-box,repeating-linear-gradient(-45deg,black 0,black 25%,white 0,white 50%) 0 /.6em .6em;
+		animation:ants 12s linear infinite;
+	}
+	@keyframes ants{to {background-position:100%}}
+}
+.ch2-border{
+
+	@include bd($chp2-border-default,$chp2-border-color	);
+
+}

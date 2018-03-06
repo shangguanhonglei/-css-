@@ -1,0 +1,22 @@
+@mixin size($width,$height){
+	width:$width;
+	height:$height;
+}
+@mixin clearfix(){
+	&:before,&:after{
+		content:'';
+		display:table;
+	}
+	&:after{
+		clear:both;
+	}
+}
+@mixin wavePoint($color,$scale,$size,$bgcolor){
+	background:radial-gradient($color $scale,transparent 0),radial-gradient($color $scale,transparent 0);
+	background-size:$size $size;
+	background-position:0 0,$size/2 $size/2;
+	background-color:$bgcolor;
+}
+@mixin bd($w,$c){
+	border:$w solid $c;
+}
