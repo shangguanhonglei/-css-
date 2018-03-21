@@ -1,4 +1,4 @@
-@import './mixins/ch2';
+@import './mixins/mixins';
 @import './variable';
 .ch2-bg{
 	@include clearfix();
